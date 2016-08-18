@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: hambern.company::lang.labels.id
+    source:
+        label: hambern.company::lang.labels.source
+    content:
+        label: hambern.company::lang.labels.content
+        select: concat(substr(content, 1, 50),"...")
+    published_at:
+        label: hambern.company::lang.labels.published_at
+        type: date
+    updated_at:
+        label: hambern.company::lang.labels.updated_at
+        type: date

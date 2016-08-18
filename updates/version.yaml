@@ -1,0 +1,73 @@
+1.0.1:
+    - First version of Company
+    - create_employees_table.php
+    - create_projects_table.php
+    - create_roles_table.php
+    - create_services_table.php
+    - create_pivots_table.php
+1.0.2:
+    - Added galleries
+    - create_galleries_table.php
+1.0.3:
+    - Added testimonials
+    - create_testimonials_table.php
+1.0.4:
+    - Changed timestamps() to nullableTimestamps() in migrations
+1.0.5:
+    - Much better permission integration
+1.0.6:
+    - Important bug fix to permission integration
+1.0.7:
+    - Another bug fix to permission integration. Still learning this...
+1.0.8:
+    - Facepalm update ;)
+1.1.0:
+    - Perfected permissions
+1.1.1:
+    - Implements some support of the translate plugin
+1.1.2:
+    - Improved services tools
+1.1.3:
+    - Further improved services tools
+1.1.4:
+    - Added links tool
+    - create_links_table.php
+1.1.5:
+    - Minor bug fixes
+1.1.6:
+    - Settings now also translatable
+1.1.7:
+    - Employee bug fixed
+1.1.8:
+    - Added role filter to Employee component
+1.1.9:
+    - Added role component
+1.1.10:
+    - Change string to text on Testimonial content
+    - change_testimonials_table_20160201.php
+1.1.11:
+    - Changed field layout for better responsiveness and added markdown for role descriptions
+1.1.12:
+    - ...and applying the necessary database-changes
+    - change_roles_table_20160202.php
+1.2.0:
+    - Added pagination options to the components
+1.2.1:
+    - Cleaned up the models and corrected a small bug in the service model
+1.2.2:
+    - Another small update to the service component
+1.2.3:
+    - Rearranging components to be able to show several of them at once on the same page
+1.2.4:
+    - Bug fix and a lot cleaner components
+1.2.5:
+    - Bug fix in Links component
+1.2.6:
+    - Thanks to Jan Vince Company now comes in a Czech translation as well
+1.2.7:
+    - Contacts options updated to suit SQL lite as well (thanx Jan Vince)
+1.2.8:
+    - Fixed bug on Company-form when there were no employees
+1.2.9:
+    - Add social media information
+    - change_employees_table_20160816.php

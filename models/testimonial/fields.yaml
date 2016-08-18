@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    content:
+        label: hambern.company::lang.labels.content
+        type: textarea
+        span: full
+    picture:
+        label: hambern.company::lang.labels.picture
+        type: fileupload
+        mode: image
+        span: right
+        imageHeight: 260
+        imageWidth: 260
+    source:
+        label: hambern.company::lang.labels.source
+        span: left
+    url:
+        label: hambern.company::lang.labels.url
+        span: left
+        default: http://
+    published_at:
+        label: hambern.company::lang.labels.published_at
+        type: datepicker
+        mode: date
+        span: left

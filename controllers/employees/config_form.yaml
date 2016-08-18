@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: hambern.company::lang.employee.label
+
+# Model Form Field configuration
+form: $/hambern/company/models/employee/fields.yaml
+
+# Model Class name
+modelClass: Hambern\Company\Models\Employee
+
+# Default redirect location
+defaultRedirect: hambern/company/employees
+
+# Create page
+create:
+    title: hambern.company::lang.employee.create_title
+    redirect: hambern/company/employees/update/:id
+    redirectClose: hambern/company/employees
+
+# Update page
+update:
+    title: hambern.company::lang.employee.update_title
+    redirect: hambern/company/employees
+    redirectClose: hambern/company/employees
+
+# Preview page
+preview:
+    title: hambern.company::lang.employee.preview_title

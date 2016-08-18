@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: hambern.company::lang.service.label
+
+# Model Form Field configuration
+form: $/hambern/company/models/service/fields.yaml
+
+# Model Class name
+modelClass: Hambern\Company\Models\Service
+
+# Default redirect location
+defaultRedirect: hambern/company/services
+
+# Create page
+create:
+    title: hambern.company::lang.service.create_title
+    redirect: hambern/company/services/update/:id
+    redirectClose: hambern/company/services
+
+# Update page
+update:
+    title: hambern.company::lang.service.update_title
+    redirect: hambern/company/services
+    redirectClose: hambern/company/services
+
+# Preview page
+preview:
+    title: hambern.company::lang.service.preview_title

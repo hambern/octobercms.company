@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: hambern.company::lang.labels.name
+        span: auto
+    published_at:
+        label: hambern.company::lang.labels.published_at
+        type: datepicker
+        mode: date
+        span: auto
+    description:
+        label: hambern.company::lang.labels.description
+        type: richeditor
+        size: huge
+        span: full
+    pictures:
+        label: hambern.company::lang.labels.pictures
+        type: fileupload
+        mode: image
+        span: full
+        imageHeight: 260
+        imageWidth: 260

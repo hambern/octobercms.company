@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: hambern.company::lang.project.label
+
+# Model Form Field configuration
+form: $/hambern/company/models/project/fields.yaml
+
+# Model Class name
+modelClass: Hambern\Company\Models\Project
+
+# Default redirect location
+defaultRedirect: hambern/company/projects
+
+# Create page
+create:
+    title: hambern.company::lang.project.create_title
+    redirect: hambern/company/projects/update/:id
+    redirectClose: hambern/company/projects
+
+# Update page
+update:
+    title: hambern.company::lang.project.update_title
+    redirect: hambern/company/projects
+    redirectClose: hambern/company/projects
+
+# Preview page
+preview:
+    title: hambern.company::lang.project.preview_title

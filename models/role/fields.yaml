@@ -1,0 +1,26 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: hambern.company::lang.labels.name
+        span: auto
+    published_at:
+        label: hambern.company::lang.labels.published_at
+        type: datepicker
+        mode: date
+        span: auto
+tabs:
+  fields:
+    description:
+        type: richeditor
+        size: giant
+        label: hambern.company::lang.labels.description
+        span: full
+        tab: hambern.company::lang.labels.description
+    employees:
+        label: hambern.company::lang.employees.menu_label
+        type: checkboxlist
+        span: full
+        tab: hambern.company::lang.employees.menu_label

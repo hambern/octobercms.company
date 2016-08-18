@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: hambern.company::lang.link.label
+
+# Model Form Field configuration
+form: $/hambern/company/models/link/fields.yaml
+
+# Model Class name
+modelClass: Hambern\Company\Models\Link
+
+# Default redirect location
+defaultRedirect: hambern/company/links
+
+# Create page
+create:
+    title: hambern.company::lang.link.create_title
+    redirect: hambern/company/links/update/:id
+    redirectClose: hambern/company/links
+
+# Update page
+update:
+    title: hambern.company::lang.link.update_title
+    redirect: hambern/company/links
+    redirectClose: hambern/company/links
+
+# Preview page
+preview:
+    title: hambern.company::lang.link.preview_title

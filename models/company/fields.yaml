@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: hambern.company::lang.company.name
+    slogan:
+        label: hambern.company::lang.company.slogan
+    contact:
+        type: dropdown
+        label: hambern.company::lang.company.contact
+
+tabs:
+  fields:
+      logo:
+          label: hambern.company::lang.labels.logo
+          type: fileupload
+          mode: image
+          imageHeight: 260
+          imageWidth: 260
+          tab: hambern.company::lang.labels.logo
+      story:
+          type: richeditor
+          size: giant
+          label: hambern.company::lang.company.story
+          tab: hambern.company::lang.company.story

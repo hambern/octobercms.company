@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: hambern.company::lang.gallery.label
+
+# Model Form Field configuration
+form: $/hambern/company/models/gallery/fields.yaml
+
+# Model Class name
+modelClass: Hambern\Company\Models\Gallery
+
+# Default redirect location
+defaultRedirect: hambern/company/galleries
+
+# Create page
+create:
+    title: hambern.company::lang.gallery.create_title
+    redirect: hambern/company/galleries/update/:id
+    redirectClose: hambern/company/galleries
+
+# Update page
+update:
+    title: hambern.company::lang.gallery.update_title
+    redirect: hambern/company/galleries
+    redirectClose: hambern/company/galleries
+
+# Preview page
+preview:
+    title: hambern.company::lang.gallery.preview_title
