@@ -71,3 +71,6 @@
 1.2.9:
     - Add social media information
     - change_employees_table_20160816.php
+1.2.10:
+    - Add social media bug fix
+    - change_employees_table_20160831.php
