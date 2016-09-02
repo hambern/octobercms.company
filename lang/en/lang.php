@@ -117,6 +117,7 @@ return [
         'order' => 'Order',
         'paginate' => 'Paginate',
         'social' => 'Social Media',
+        'social_prompt' => 'Add social media',
         'user_url' => 'Url to Profile',
     ],
     'service' => [

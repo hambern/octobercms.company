@@ -74,3 +74,5 @@
 1.2.10:
     - Add social media bug fix
     - change_employees_table_20160831.php
+1.2.11:
+    - Added social media prompt (thanx Jan Vince)

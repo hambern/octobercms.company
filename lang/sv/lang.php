@@ -117,6 +117,7 @@ return [
         'order' => 'Sortera',
         'paginate' => 'Paginera',
         'social' => 'Sociala medier',
+        'social_prompt' => 'Lägg till social media',
         'user_url' => 'Url till profil',
     ],
     'service' => [
