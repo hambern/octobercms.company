@@ -93,6 +93,7 @@ return [
         'picture' => 'Foto',
         'email' => 'E-post',
         'phone' => 'Telefon',
+        'address' => 'Adress',
         'published_at' => 'Publicerad',
         'customer' => 'Kund',
         'url' => 'Hemsideadress',

@@ -76,3 +76,5 @@
     - change_employees_table_20160831.php
 1.2.11:
     - Added social media prompt (thanx Jan Vince)
+1.2.12:
+    - Added company email, phone and address

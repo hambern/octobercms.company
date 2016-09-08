@@ -5,11 +5,23 @@
 fields:
     name:
         label: hambern.company::lang.company.name
+        span: auto
     slogan:
         label: hambern.company::lang.company.slogan
+        span: auto
+    email:
+        label: hambern.company::lang.labels.email
+        span: auto
+    phone:
+        label: hambern.company::lang.labels.phone
+        span: auto
+    address:
+        label: hambern.company::lang.labels.address
+        span: auto
     contact:
-        type: dropdown
         label: hambern.company::lang.company.contact
+        type: dropdown
+        span: auto
 
 tabs:
   fields:
