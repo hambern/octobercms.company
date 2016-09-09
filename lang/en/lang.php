@@ -93,7 +93,7 @@ return [
         'picture' => 'Picture',
         'email' => 'Email',
         'phone' => 'Phone',
-        'adderss' => 'Address',
+        'address' => 'Address',
         'published_at' => 'Published',
         'customer' => 'Customer',
         'url' => 'Homepage Url',
