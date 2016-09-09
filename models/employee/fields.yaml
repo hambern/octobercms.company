@@ -67,7 +67,6 @@ tabs:
                   label: hambern.company::lang.labels.icon
                   span: auto
                   default: fa-
-                  plcaeholder: fa-
                   comment: hambern.company::lang.projects.icon_comment
                   tab: hambern.company::lang.labels.description
               username:

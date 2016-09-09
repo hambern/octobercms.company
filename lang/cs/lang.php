@@ -4,7 +4,7 @@
  * Translation of Mattias Hambern 'Company' plugin.
  *
  * @author Jan Vince (jan@vince.cz)
- * @version 1.0
+ * @version 1.1
  */
 
 return [
@@ -27,6 +27,7 @@ return [
         'delete_confirm' => 'Opravdu chcete smazat vybraného zaměstnance?',
         'delete_selected_success' => 'vybraný zaměstnnaec byl úspěšně smazán.',
         'delete_selected_empty' => 'Nelze smazat záznam :name.',
+        'name_comment' => 'Vložte název sociálního média',
     ],
     'components' => [
         'employees' => [
@@ -89,6 +90,7 @@ return [
     ],
     'labels' => [
         'name' => 'Název',
+        'username' => 'Uživatelské jméno',
         'first_name' => 'Křestní',
         'last_name' => 'Příjmení',
         'quote' => 'Poznámka',
@@ -121,6 +123,9 @@ return [
         'perPage' => 'Počet na stránku',
         'order' => 'Řadit',
         'paginate' => 'Stránkovat',
+        'social' => 'Sociální média',
+        'social_prompt' => 'Přidat nové médium',
+        'user_url' => 'Webová stránka uživatelského profilu'
     ],
     'service' => [
         'new' => 'Přidat službu',
