@@ -73,11 +73,11 @@ return [
         'delete_selected_empty' => 'There are no selected :name to delete.',
     ],
     'descriptions' => [
-        'maxItems' => 'Pick the maximum amout of results from your component',
+        'maxItems' => 'Pick the maximum amount of results from your component',
         'itemId' => 'Pick only one result from your component based on id number',
         'orderBy' => 'Pick a column from which to order the results',
         'sort' => 'Pick a direction to sort the results by',
-        'paginate' => 'Choose weither to paginate or not',
+        'paginate' => 'Choose whether to paginate or not',
         'page' => 'Pick which page number you want to show',
         'perPage' => 'Choose how many items you want per page',
     ],
