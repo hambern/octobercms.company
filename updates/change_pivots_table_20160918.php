@@ -9,7 +9,7 @@ class ChangePivotsTable20160918 extends Migration
 	public function up()
 	{
 		Schema::table('hambern_company_pivots', function ($table) {
-			$table->text('tag_id')->nullable();
+			$table->integer('tag_id')->nullable();
 		});
 	}
 
