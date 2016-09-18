@@ -5,7 +5,7 @@
 services:
     label: hambern.company::lang.service.label
     manage:
-        form: $/hambern/company/models/service/fields.yaml
+        form: $/hambern/company/models/project/fields_modal.yaml
         list: $/hambern/company/models/service/columns.yaml
         showSearch: true
     view:
@@ -16,7 +16,7 @@ services:
 projects:
     label: hambern.company::lang.project.label
     manage:
-        form: $/hambern/company/models/project/fields.yaml
+        form: $/hambern/company/models/project/fields_modal.yaml
         list: $/hambern/company/models/project/columns.yaml
         showSearch: true
     view:
@@ -27,7 +27,7 @@ projects:
 galleries:
     label: hambern.company::lang.gallery.label
     manage:
-        form: $/hambern/company/models/gallery/fields.yaml
+        form: $/hambern/company/models/project/fields_modal.yaml
         list: $/hambern/company/models/gallery/columns.yaml
         showSearch: true
     view:
