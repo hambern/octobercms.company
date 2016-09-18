@@ -82,3 +82,7 @@
     - Updated Czech language file
 1.2.14:
     - Fixed a really small typo
+1.3.0:
+    - Added tags
+    - create_tags_table.php
+    - change_pivots_table_20160918.php

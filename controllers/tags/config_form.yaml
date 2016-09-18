@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: hambern.company::lang.tag.label
+
+# Model Form Field configuration
+form: $/hambern/company/models/tag/fields.yaml
+
+# Model Class name
+modelClass: Hambern\Company\Models\Tag
+
+# Default redirect location
+defaultRedirect: hambern/company/tags
+
+# Create page
+create:
+    title: hambern.company::lang.tag.create_title
+    redirect: hambern/company/tags/update/:id
+    redirectClose: hambern/company/tags
+
+# Update page
+update:
+    title: hambern.company::lang.tag.update_title
+    redirect: hambern/company/tags
+    redirectClose: hambern/company/tags
+
+# Preview page
+preview:
+    title: hambern.company::lang.tag.preview_title

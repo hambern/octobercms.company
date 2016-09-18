@@ -55,6 +55,10 @@ return [
             'name' => 'Roles',
             'description' => 'Show your company roles',
         ],
+        'tags' => [
+            'name' => 'Tags Component',
+            'description' => 'No description provided yet...',
+        ],
     ],
     'role' => [
         'new' => 'New Role',
@@ -212,5 +216,21 @@ return [
         'delete_confirm' => 'Do you really want to delete this Link?',
         'delete_selected_success' => 'Successfully deleted the selected Links.',
         'delete_selected_empty' => 'There are no selected Links to delete.',
+    ],
+    'tag' => [
+        'new' => 'New Tag',
+        'label' => 'Tag',
+        'create_title' => 'Create Tag',
+        'update_title' => 'Edit Tag',
+        'preview_title' => 'Preview Tag',
+        'list_title' => 'Manage Tags',
+    ],
+    'tags' => [
+        'delete_selected_confirm' => 'Delete the selected Tags?',
+        'menu_label' => 'Tags',
+        'return_to_list' => 'Return to Tags',
+        'delete_confirm' => 'Do you really want to delete this Tag?',
+        'delete_selected_success' => 'Successfully deleted the selected Tags.',
+        'delete_selected_empty' => 'There are no selected Tags to delete.',
     ],
 ];

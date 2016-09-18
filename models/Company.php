@@ -1,6 +1,7 @@
 <?php namespace Hambern\Company\Models;
 
 use October\Rain\Database\Model as BaseModel;
+use BackendMenu;
 
 /**
 * Settings Model

@@ -15,7 +15,12 @@ class Gallery extends Model
 	public $hasOne = [];
 	public $hasMany = [];
 	public $belongsTo = [];
-	public $belongsToMany = [];
+	public $belongsToMany = [
+		'tags' => [
+			'Hambern\Company\Models\Tag',
+			'table' => 'hambern_company_pivots',
+		],
+	];
 	public $morphTo = [];
 	public $morphOne = [];
 	public $morphMany = [];

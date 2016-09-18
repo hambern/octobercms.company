@@ -21,6 +21,10 @@ class Project extends Model
 			'Hambern\Company\Models\Service',
 			'table' => 'hambern_company_pivots',
 		],
+		'tags' => [
+			'Hambern\Company\Models\Tag',
+			'table' => 'hambern_company_pivots',
+		],
 	];
 	public $morphTo = [];
 	public $morphOne = [];
@@ -37,11 +41,6 @@ class Project extends Model
 	{
 		parent::afterDelete();
 		$this->services()->detach();
-	}
-
-	public function getServicesOptions()
-	{
-		return Service::all()->lists('name', 'id');
 	}
 
 }

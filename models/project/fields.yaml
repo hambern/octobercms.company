@@ -28,8 +28,8 @@ tabs:
         span: full
         tab: hambern.company::lang.labels.description
     services:
-        label: hambern.company::lang.services.menu_label
-        type: checkboxlist
+        type: partial
+        path: $/hambern/company/controllers/relations/services.htm
         tab: hambern.company::lang.services.menu_label
     picture:
         label: hambern.company::lang.labels.picture
@@ -53,3 +53,7 @@ tabs:
         mode: file
         span: right
         tab: hambern.company::lang.labels.attachments
+    tags:
+        type: partial
+        path: $/hambern/company/controllers/relations/tags.htm
+        tab: hambern.company::lang.tags.menu_label

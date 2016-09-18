@@ -19,7 +19,3 @@ tabs:
         label: hambern.company::lang.labels.description
         span: full
         tab: hambern.company::lang.labels.description
-    employees:
-        type: partial
-        path: $/hambern/company/controllers/relations/employees.htm
-        tab: hambern.company::lang.employees.menu_label

@@ -62,6 +62,10 @@ return [
             'name' => 'Role',
             'description' => 'Vloží do webu firemní role',
         ],
+        'tags' => [
+            'name' => 'hambern.company::lang.components.tags.name',
+            'description' => 'hambern.company::lang.components.tags.description',
+        ],
     ],
     'role' => [
         'new' => 'Přidat roli',
@@ -125,7 +129,7 @@ return [
         'paginate' => 'Stránkovat',
         'social' => 'Sociální média',
         'social_prompt' => 'Přidat nové médium',
-        'user_url' => 'Webová stránka uživatelského profilu'
+        'user_url' => 'Webová stránka uživatelského profilu',
     ],
     'service' => [
         'new' => 'Přidat službu',
@@ -218,5 +222,21 @@ return [
         'delete_confirm' => 'Opravdu chcete smazat tento odkaz?',
         'delete_selected_success' => 'Vybrané odkazy byly smazány.',
         'delete_selected_empty' => 'Nelze smazat záznam :name.',
+    ],
+    'tag' => [
+        'new' => 'hambern.company::lang.tag.new',
+        'label' => 'hambern.company::lang.tag.label',
+        'create_title' => 'hambern.company::lang.tag.create_title',
+        'update_title' => 'hambern.company::lang.tag.update_title',
+        'preview_title' => 'hambern.company::lang.tag.preview_title',
+        'list_title' => 'hambern.company::lang.tag.list_title',
+    ],
+    'tags' => [
+        'delete_selected_confirm' => 'hambern.company::lang.tags.delete_selected_confirm',
+        'menu_label' => 'hambern.company::lang.tags.menu_label',
+        'return_to_list' => 'hambern.company::lang.tags.return_to_list',
+        'delete_confirm' => 'hambern.company::lang.tags.delete_confirm',
+        'delete_selected_success' => 'hambern.company::lang.tags.delete_selected_success',
+        'delete_selected_empty' => 'hambern.company::lang.tags.delete_selected_empty',
     ],
 ];

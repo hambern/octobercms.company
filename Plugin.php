@@ -77,6 +77,12 @@ class Plugin extends PluginBase
 						'url'         => Backend::url('hambern/company/links'),
 						'permissions' => ['hambern.company.access_links'],
 					],
+					'tags' => [
+						'label'       => 'hambern.company::lang.tags.menu_label',
+						'icon'        => 'icon-tag',
+						'url'         => Backend::url('hambern/company/tags'),
+						'permissions' => ['hambern.company.access_tags'],
+					],
 				],
 			],
 		];
@@ -123,6 +129,10 @@ class Plugin extends PluginBase
 				'label' => 'hambern.company::lang.testimonial.list_title',
 				'tab'   => 'hambern.company::lang.plugin.name',
 			],
+			'hambern.company.access_tags' 	=> [
+				'label' => 'hambern.company::lang.tag.list_title',
+				'tab'   => 'hambern.company::lang.plugin.name',
+			],
 			'hambern.company.access_company'      	=> [
 				'label' => 'hambern.company::lang.company.list_title',
 				'tab'   => 'hambern.company::lang.plugin.name',
@@ -140,7 +150,8 @@ class Plugin extends PluginBase
 			'Hambern\Company\Components\Galleries'    => 'Galleries',
 			'Hambern\Company\Components\Company'      => 'Company',
 			'Hambern\Company\Components\Testimonials' => 'Testimonials',
-			'Hambern\Company\Components\Links' 		  => 'Links',
+			'Hambern\Company\Components\Links' 		  	=> 'Links',
+			'Hambern\Company\Components\Tags' 		  	=> 'Tags',
 		];
 	}
 

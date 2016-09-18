@@ -49,10 +49,6 @@ tabs:
         label: hambern.company::lang.labels.description
         span: full
         tab: hambern.company::lang.labels.description
-    roles:
-        type: partial
-        path: $/hambern/company/controllers/relations/roles.htm
-        tab: hambern.company::lang.roles.menu_label
     social_media:
       type: repeater
       tab: hambern.company::lang.labels.social

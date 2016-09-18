@@ -1,0 +1,69 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+services:
+    label: hambern.company::lang.service.label
+    manage:
+        form: $/hambern/company/models/service/fields.yaml
+        list: $/hambern/company/models/service/columns.yaml
+        showSearch: true
+    view:
+        list: $/hambern/company/models/service/columns.yaml
+        toolbarButtons: add|remove
+        showSearch: true
+
+projects:
+    label: hambern.company::lang.project.label
+    manage:
+        form: $/hambern/company/models/project/fields.yaml
+        list: $/hambern/company/models/project/columns.yaml
+        showSearch: true
+    view:
+        list: $/hambern/company/models/project/columns.yaml
+        toolbarButtons: add|remove
+        showSearch: true
+
+galleries:
+    label: hambern.company::lang.gallery.label
+    manage:
+        form: $/hambern/company/models/gallery/fields.yaml
+        list: $/hambern/company/models/gallery/columns.yaml
+        showSearch: true
+    view:
+        list: $/hambern/company/models/gallery/columns.yaml
+        toolbarButtons: add|remove
+        showSearch: true
+
+tags:
+    label: hambern.company::lang.tag.label
+    manage:
+        form: $/hambern/company/models/tag/fields_modal.yaml
+        list: $/hambern/company/models/tag/columns.yaml
+        showSearch: true
+    view:
+        list: $/hambern/company/models/tag/columns.yaml
+        toolbarButtons: create|add|remove
+        showSearch: true
+
+roles:
+    label: hambern.company::lang.role.label
+    manage:
+        form: $/hambern/company/models/role/fields_modal.yaml
+        list: $/hambern/company/models/role/columns.yaml
+        showSearch: true
+    view:
+        list: $/hambern/company/models/role/columns.yaml
+        toolbarButtons: create|add|remove
+        showSearch: true
+
+employees:
+    label: hambern.company::lang.employee.label
+    manage:
+        form: $/hambern/company/models/employee/fields_modal.yaml
+        list: $/hambern/company/models/employee/columns.yaml
+        showSearch: true
+    view:
+        list: $/hambern/company/models/employee/columns.yaml
+        toolbarButtons: add|remove
+        showSearch: true

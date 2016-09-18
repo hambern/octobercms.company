@@ -1,7 +1,6 @@
 <?php namespace Hambern\Company\Controllers;
 
 use BackendMenu;
-use Backend\Classes\Controller;
 use Flash;
 use Lang;
 use Hambern\Company\Models\Link;
@@ -13,14 +12,6 @@ class Links extends Controller
 {
 
     public $requiredPermissions = ['hambern.company.access_links'];
-
-    public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
-    ];
-
-    public $formConfig = 'config_form.yaml';
-    public $listConfig = 'config_list.yaml';
 
     public function __construct()
     {

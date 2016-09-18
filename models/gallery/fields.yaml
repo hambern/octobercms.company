@@ -11,11 +11,9 @@ fields:
         type: datepicker
         mode: date
         span: auto
-    description:
-        label: hambern.company::lang.labels.description
-        type: richeditor
-        size: huge
-        span: full
+
+tabs:
+  fields:
     pictures:
         label: hambern.company::lang.labels.pictures
         type: fileupload
@@ -23,3 +21,14 @@ fields:
         span: full
         imageHeight: 260
         imageWidth: 260
+        label: hambern.company::lang.labels.pictures
+    description:
+        label: hambern.company::lang.labels.description
+        type: richeditor
+        size: giant
+        span: full
+        tab: hambern.company::lang.labels.description
+    tags:
+        type: partial
+        path: $/hambern/company/controllers/relations/tags.htm
+        tab: hambern.company::lang.tags.menu_label

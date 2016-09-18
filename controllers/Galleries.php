@@ -1,6 +1,5 @@
 <?php namespace Hambern\Company\Controllers;
 
-use Backend\Classes\Controller;
 use BackendMenu;
 use Flash;
 use Hambern\Company\Models\Gallery;
@@ -13,14 +12,6 @@ class Galleries extends Controller
 {
 
 	public $requiredPermissions = ['hambern.company.access_galleries'];
-
-	public $implement = [
-		'Backend.Behaviors.FormController',
-		'Backend.Behaviors.ListController',
-	];
-
-	public $formConfig = 'config_form.yaml';
-	public $listConfig = 'config_list.yaml';
 
 	public function __construct()
 	{
