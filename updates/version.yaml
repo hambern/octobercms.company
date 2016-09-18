@@ -82,6 +82,8 @@
     - Updated Czech language file
 1.2.14:
     - Fixed a really small typo
+1.2.15:
+    - Dutch translations added
 1.3.0:
     - Added tags
     - create_tags_table.php
