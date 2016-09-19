@@ -3,6 +3,8 @@
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Schema;
+use Hambern\Company\Models\Tag;
+use Hambern\Company\Models\Role;
 
 class Component extends ComponentBase
 {
@@ -19,22 +21,22 @@ class Component extends ComponentBase
 	{
 		return [
 			'itemId'   => [
-				'title'             => 'hambern.company::lang.labels.itemId',
-				'description'       => 'hambern.company::lang.descriptions.itemId',
+				'title'             => 'hambern.company::lang.labels.item_id',
+				'description'       => 'hambern.company::lang.descriptions.item_id',
 				'default'           => '',
 				'type'              => 'string',
 				'validationPattern' => '^[0-9]+$',
 			],
 			'maxItems' => [
-				'title'             => 'hambern.company::lang.labels.maxItems',
-				'description'       => 'hambern.company::lang.descriptions.maxItems',
+				'title'             => 'hambern.company::lang.labels.max_items',
+				'description'       => 'hambern.company::lang.descriptions.max_items',
 				'default'           => 36,
 				'type'              => 'string',
 				'validationPattern' => '^[0-9]+$',
 			],
 			'orderBy'  => [
-				'title'       => 'hambern.company::lang.labels.orderBy',
-				'description' => 'hambern.company::lang.descriptions.orderBy',
+				'title'       => 'hambern.company::lang.labels.order_by',
+				'description' => 'hambern.company::lang.descriptions.order_by',
 				'type'        => 'dropdown',
 				'default'     => 'id',
 				'group'     	=> 'hambern.company::lang.labels.order',
@@ -62,8 +64,8 @@ class Component extends ComponentBase
 				'group'				=> 'hambern.company::lang.labels.paginate',
 			],
 			'perPage'     => [
-				'title'       => 'hambern.company::lang.labels.perPage',
-				'description' => 'hambern.company::lang.descriptions.perPage',
+				'title'       => 'hambern.company::lang.labels.per_page',
+				'description' => 'hambern.company::lang.descriptions.per_page',
 				'type'        => 'string',
 				'default'     => '12',
 				'validationPattern' => '^[0-9]+$',
@@ -86,6 +88,15 @@ class Component extends ComponentBase
 		foreach ($schema as $column) {
 			$options[$column] = ucwords(str_replace('_', ' ', $column));
 		}
+		return $options;
+	}
+
+	public function getFilterTagOptions()
+	{
+		$options = [Lang::get('hambern.company::lang.labels.show_all')];
+		$tags = Tag::all();
+		if ($tags)
+			$options += $tags->lists('name', 'id');
 		return $options;
 	}
 }

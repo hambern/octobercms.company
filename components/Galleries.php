@@ -1,6 +1,8 @@
 <?php namespace Hambern\Company\Components;
 
 use Hambern\Company\Models\Gallery;
+use Illuminate\Support\Facades\Lang;
+use Hambern\Company\Models\Tag;
 
 class Galleries extends Component
 {
@@ -21,6 +23,18 @@ class Galleries extends Component
 			$this->page['galleries'] = $this->galleries();
 	}
 
+	public function defineProperties()
+	{
+		$properties = parent::defineProperties();
+		$properties['filterTag'] = [
+			'title'       => 'hambern.company::lang.tags.menu_label',
+			'description' => 'hambern.company::lang.descriptions.filter_tags',
+			'type'        => 'dropdown',
+			'group'     	=> 'hambern.company::lang.labels.filters',
+		];
+		return $properties;
+	}
+
 	public function gallery()
 	{
 		if (is_numeric($this->property('itemId'))) {
@@ -30,17 +44,34 @@ class Galleries extends Component
 	}
 
 	public function galleries()
-	{
-		if (!is_numeric($this->property('itemId'))) {
+  {
+    if (!is_numeric($this->property('itemId'))) {
 			if ($this->list) return $this->list;
-			$galleries = Gallery::published()
-				->with('pictures')
-				->orderBy($this->property('orderBy', 'id'), $this->property('sort', 'desc'))
-				->take($this->property('maxItems'));
+
+			$galleries = Gallery::published()->with('pictures');
+
+			if ($this->property('filterTag')) {
+				$galleries->whereHas('tags', function ($query) {
+	    		$query->where('id', '=', $this->property('filterTag'));
+				})->with('tags');
+			}
+
+      $galleries = $galleries->orderBy(
+				$this->property('orderBy', 'id'),
+				$this->property('sort', 'desc'))->take($this->property('maxItems'));
 
 			return $this->list = $this->property('paginate') ?
-				$galleries->paginate($this->property('perPage'), $this->property('page')) :
-				$galleries->get();
-		}
+        $galleries->paginate($this->property('perPage'), $this->property('page')) :
+        $galleries->get();
+    }
+  }
+
+	public function getFilterTagOptions()
+	{
+		$options = [Lang::get('hambern.company::lang.labels.show_all')];
+		$tags = Tag::has('galleries')->get();
+		if ($tags)
+			$options += $tags->lists('name', 'id');
+		return $options;
 	}
 }
