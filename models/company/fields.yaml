@@ -37,3 +37,25 @@ tabs:
           size: giant
           label: hambern.company::lang.company.story
           tab: hambern.company::lang.company.story
+      social_media:
+        type: repeater
+        tab: hambern.company::lang.labels.social
+        prompt: hambern.company::lang.labels.social_prompt
+        form:
+            fields:
+                name:
+                    label: hambern.company::lang.labels.name
+                    comment: hambern.company::lang.employees.name_comment
+                    span: auto
+                icon:
+                    label: hambern.company::lang.labels.icon
+                    span: auto
+                    default: fa-
+                    comment: hambern.company::lang.projects.icon_comment
+                    tab: hambern.company::lang.labels.description
+                username:
+                    label: hambern.company::lang.labels.username
+                    span: auto
+                url:
+                    label: hambern.company::lang.labels.user_url
+                    span: auto
