@@ -94,3 +94,5 @@
     - Added social media to company
 1.3.3:
     - !!! This changes the logo-field in company to mediafinder. You will have to re-upload it
+1.3.4:
+    - Added default dates on published_at and born_at
