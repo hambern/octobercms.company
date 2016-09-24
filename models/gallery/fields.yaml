@@ -17,7 +17,7 @@ tabs:
     pictures:
         label: hambern.company::lang.labels.pictures
         type: fileupload
-        mode: fileupload
+        mode: image
         span: full
         imageHeight: 260
         imageWidth: 260
