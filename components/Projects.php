@@ -37,7 +37,7 @@ class Projects extends Component
 
 	public function project()
   {
-    if (is_numeric($this->property('itemId'))) {
+    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
 			if ($this->item) return $this->item;
 			return $this->item = Project::whereId($this->property('itemId'))->with('picture', 'pictures', 'files')->first();
     }
@@ -45,7 +45,7 @@ class Projects extends Component
 
 	public function projects()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
 			if ($this->list) return $this->list;
 
 			$projects = Project::published()->with('picture', 'pictures', 'files');

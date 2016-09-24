@@ -37,7 +37,7 @@ class Services extends Component
 
 	public function service()
   {
-    if (is_numeric($this->property('itemId'))) {
+    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
 			if ($this->item) return $this->item;
 			return $this->item = Service::whereId($this->property('itemId'))->with('picture', 'pictures', 'files')->first();
     }
@@ -45,7 +45,7 @@ class Services extends Component
 
   public function services()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
 			if ($this->list) return $this->list;
 
 			$services = Service::published()->with('picture', 'pictures', 'files');

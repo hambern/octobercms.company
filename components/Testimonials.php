@@ -23,7 +23,7 @@ class Testimonials extends Component
 
 	public function testimonial()
   {
-    if (is_numeric($this->property('itemId'))) {
+    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
 			if ($this->item) return $this->item;
 			return $this->item = Testimonial::whereId($this->property('itemId'))->with('picture')->first();
     }
@@ -31,7 +31,7 @@ class Testimonials extends Component
 
   public function testimonials()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
 			if ($this->list) return $this->list;
       $testimonials = Testimonial::published()
 				->with('picture')

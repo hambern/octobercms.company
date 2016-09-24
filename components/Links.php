@@ -23,7 +23,7 @@ class Links extends Component
 
   public function link()
   {
-    if (is_numeric($this->property('itemId'))) {
+    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
       if ($this->item) return $this->item;
 			return $this->item = Link::whereId($this->property('itemId'))->with('picture', 'pictures')->first();
     }
@@ -31,7 +31,7 @@ class Links extends Component
 
   public function links()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
       if ($this->list) return $this->list;
       $links = Link::published()
         ->with('picture', 'pictures')

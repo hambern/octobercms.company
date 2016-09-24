@@ -23,7 +23,7 @@ class Tags extends Component
 
   public function tag()
   {
-    if (is_numeric($this->property('itemId'))) {
+    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
       if ($this->item) return $this->item;
       return $this->item = Tag::whereId($this->property('itemId'))->with('picture', 'pictures')->first();
     }
@@ -31,7 +31,7 @@ class Tags extends Component
 
   public function tags()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
       if ($this->list) return $this->list;
       $tags = Tag::published()
         ->with('picture', 'pictures')

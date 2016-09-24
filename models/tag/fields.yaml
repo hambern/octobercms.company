@@ -28,7 +28,7 @@ tabs:
             tab: hambern.company::lang.labels.description
         picture:
             label: hambern.company::lang.labels.picture
-            type: fileupload
+            type: mediafinder
             mode: image
             span: left
             imageHeight: 260

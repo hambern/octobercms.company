@@ -27,7 +27,7 @@ tabs:
   fields:
       logo:
           label: hambern.company::lang.labels.logo
-          type: fileupload
+          type: mediafinder
           mode: image
           imageHeight: 260
           imageWidth: 260

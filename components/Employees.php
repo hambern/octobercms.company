@@ -36,7 +36,7 @@ class Employees extends Component
 
 	public function employee()
 	{
-		if (is_numeric($this->property('itemId'))) {
+		if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
 			if ($this->item) return $this->item;
 			return $this->item = Employee::whereId($this->property('itemId'))->with('picture')->first();
 		}
@@ -44,7 +44,7 @@ class Employees extends Component
 
 	public function employees()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
 			if ($this->list) return $this->list;
 
 			$employees = Employee::published()->with('picture');

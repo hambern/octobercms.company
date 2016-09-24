@@ -37,7 +37,7 @@ class Galleries extends Component
 
 	public function gallery()
 	{
-		if (is_numeric($this->property('itemId'))) {
+		if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
 			if ($this->item) return $this->item;
 			return $this->item = Gallery::whereId($this->property('itemId'))->with('pictures')->first();
 		}
@@ -45,7 +45,7 @@ class Galleries extends Component
 
 	public function galleries()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
 			if ($this->list) return $this->list;
 
 			$galleries = Gallery::published()->with('pictures');

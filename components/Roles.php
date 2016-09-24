@@ -23,7 +23,7 @@ class Roles extends Component
 
 	public function role()
   {
-    if (is_numeric($this->property('itemId'))) {
+    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
 			if ($this->item) return $this->item;
 			return $this->item = Role::whereId($this->property('itemId'))->with('employees')->first();
     }
@@ -31,7 +31,7 @@ class Roles extends Component
 
   public function roles()
   {
-    if (!is_numeric($this->property('itemId'))) {
+    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
 			if ($this->list) return $this->list;
       $roles = Role::published()
 				->with('employees')

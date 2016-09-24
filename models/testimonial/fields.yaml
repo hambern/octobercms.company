@@ -9,7 +9,7 @@ fields:
         span: full
     picture:
         label: hambern.company::lang.labels.picture
-        type: fileupload
+        type: mediafinder
         mode: image
         span: right
         imageHeight: 260
