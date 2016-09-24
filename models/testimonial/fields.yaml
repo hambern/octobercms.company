@@ -24,5 +24,6 @@ fields:
     published_at:
         label: hambern.company::lang.labels.published_at
         type: datepicker
+        default: now
         mode: date
         span: left

@@ -15,6 +15,7 @@ fields:
         default: http://
     published_at:
         label: hambern.company::lang.labels.published_at
+        default: now
         type: datepicker
         mode: date
         span: auto
