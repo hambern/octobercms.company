@@ -93,4 +93,4 @@
 1.3.2:
     - Added social media to company
 1.3.3:
-    - !!! This changes fileupload to mediafinder on single image fields. You will have to add new images to these fields
+    - !!! This changes the logo-field in company to mediafinder. You will have to re-upload it
