@@ -32,6 +32,7 @@ tabs:
     born_at:
         label: hambern.company::lang.labels.born_at
         type: datepicker
+        default: today - 30 years
         mode: date
         minDate: 1900-01-01
         span: left
