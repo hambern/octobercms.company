@@ -19,10 +19,6 @@ class Company extends BaseModel
 
 	public $settingsFields = 'fields.yaml';
 
-	public $attachOne = [
-		'logo' => ['System\Models\File'],
-	];
-
 	public function getContactOptions()
 	{
 		$options = [];
@@ -32,5 +28,10 @@ class Company extends BaseModel
 			}
 		}
 		return $options;
+	}
+
+	public function beforeSave()
+	{
+		\Log::debug($this->attributes);
 	}
 }
