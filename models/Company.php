@@ -29,9 +29,4 @@ class Company extends BaseModel
 		}
 		return $options;
 	}
-
-	public function beforeSave()
-	{
-		\Log::debug($this->attributes);
-	}
 }
