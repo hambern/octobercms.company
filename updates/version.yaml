@@ -96,3 +96,5 @@
     - !!! This changes the logo-field in company to mediafinder. You will have to re-upload it
 1.3.4:
     - Added default dates on published_at and born_at
+1.3.5:
+    - !!! Due to a bug the logo-field is now once again a fileupload. Sorry for this.
