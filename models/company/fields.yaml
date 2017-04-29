@@ -59,3 +59,19 @@ tabs:
                 url:
                     label: hambern.company::lang.labels.user_url
                     span: auto
+      street_name:
+        label: hambern.company::lang.labels.street_name
+        tab: hambern.company::lang.labels.address
+        span: auto
+      street_number:
+        label: hambern.company::lang.labels.street_number
+        tab: hambern.company::lang.labels.address
+        span: auto
+      zip:
+        label: hambern.company::lang.labels.zip
+        tab: hambern.company::lang.labels.address
+        span: auto
+      city:
+        label: hambern.company::lang.labels.city
+        tab: hambern.company::lang.labels.address
+        span: auto

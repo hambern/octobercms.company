@@ -34,6 +34,10 @@ class Company extends ComponentBase
 		$company->address = $settings->address;
 		$company->social_media = $settings->social_media;
 		$company->contact = $this->contact();
+		$company->street_name = $settings->street_name;
+		$company->street_number = $settings->street_number;
+		$company->zip = $settings->zip;
+		$company->city = $settings->city;
 		$this->page['company'] = $company;
 	}
 
