@@ -12,11 +12,14 @@ fields:
     email:
         label: hambern.company::lang.labels.email
         span: auto
+    address:
+        label: hambern.company::lang.labels.address
+        span: auto
     phone:
         label: hambern.company::lang.labels.phone
         span: auto
-    address:
-        label: hambern.company::lang.labels.address
+    fax:
+        label: hambern.company::lang.labels.fax
         span: auto
     contact:
         label: hambern.company::lang.company.contact

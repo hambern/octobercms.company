@@ -30,6 +30,7 @@ class Company extends ComponentBase
 		$company->logo = $settings->logo;
 		$company->story = $settings->story;
 		$company->phone = $settings->phone;
+		$company->fax = $settings->fax;
 		$company->email = $settings->email;
 		$company->address = $settings->address;
 		$company->social_media = $settings->social_media;

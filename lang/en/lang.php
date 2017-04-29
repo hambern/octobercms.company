@@ -132,6 +132,7 @@ return [
         'street_number' => 'Street number',
         'zip' => 'ZIP',
         'city' => 'City',
+        'fax' => 'Fax',
     ],
     'service' => [
         'new' => 'New Service',
