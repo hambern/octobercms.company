@@ -128,6 +128,11 @@ return [
         'user_url' => 'Url to Profile',
         'filters' => 'Filters',
         'show_all' => 'Show all',
+        'street_name' => 'Street name',
+        'street_number' => 'Street number',
+        'zip' => 'ZIP',
+        'city' => 'City',
+        'fax' => 'Fax',
     ],
     'service' => [
         'new' => 'New Service',
