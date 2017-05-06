@@ -19,10 +19,6 @@ class Company extends BaseModel
 
 	public $settingsFields = 'fields.yaml';
 
-	public $attachOne = [
-		'logo' => ['System\Models\File'],
-	];
-
 	public function getContactOptions()
 	{
 		$options = [];
