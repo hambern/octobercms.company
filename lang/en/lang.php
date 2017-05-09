@@ -133,6 +133,7 @@ return [
         'zip' => 'ZIP',
         'city' => 'City',
         'fax' => 'Fax',
+        'link' => 'Link',
     ],
     'service' => [
         'new' => 'New Service',
