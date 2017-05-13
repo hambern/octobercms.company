@@ -102,3 +102,6 @@
     - Updated the Czech language file. Thanks Jan Vince!
 1.3.7:
     - Added the Portuguese language file. Thanks Ronaldo Ribeiro de Sousa!
+1.3.8:
+    - Adding link to services
+    - builder_table_update_hambern_company_services.php

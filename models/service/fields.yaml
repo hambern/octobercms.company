@@ -23,9 +23,14 @@ tabs:
             tab: hambern.company::lang.labels.description
         icon:
             label: hambern.company::lang.labels.icon
-            span: full
+            span: left
             default: fa-
             comment: hambern.company::lang.projects.icon_comment
+            tab: hambern.company::lang.labels.description
+        link:
+            label: hambern.company::lang.labels.link
+            span: right
+            type: text
             tab: hambern.company::lang.labels.description
         projects:
             type: partial
