@@ -1,64 +1,68 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
     name:
-        label: hambern.company::lang.labels.name
+        label: 'hambern.company::lang.labels.name'
+        oc.commentPosition: ''
         span: auto
+        required: 1
+        type: text
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: 'hambern.company::lang.labels.published_at'
         type: datepicker
         default: now
         mode: date
         span: auto
-
+    slug:
+        label: 'hambern.company::lang.labels.slug'
+        oc.commentPosition: ''
+        span: auto
+        type: text
 tabs:
     fields:
         description:
             type: richeditor
             size: giant
-            label: hambern.company::lang.labels.description
+            label: 'hambern.company::lang.labels.description'
             span: full
-            tab: hambern.company::lang.labels.description
+            tab: 'hambern.company::lang.labels.description'
         icon:
-            label: hambern.company::lang.labels.icon
+            label: 'hambern.company::lang.labels.icon'
             span: left
             default: fa-
-            comment: hambern.company::lang.projects.icon_comment
-            tab: hambern.company::lang.labels.description
+            comment: 'hambern.company::lang.projects.icon_comment'
+            tab: 'hambern.company::lang.labels.description'
+            type: text
         link:
-            label: hambern.company::lang.labels.link
+            label: 'hambern.company::lang.labels.link'
             span: right
             type: text
-            tab: hambern.company::lang.labels.description
+            tab: 'hambern.company::lang.labels.description'
         projects:
             type: partial
             path: $/hambern/company/controllers/relations/projects.htm
-            tab: hambern.company::lang.projects.menu_label
+            tab: 'hambern.company::lang.projects.menu_label'
         picture:
-            label: hambern.company::lang.labels.picture
+            label: 'hambern.company::lang.labels.picture'
             type: fileupload
             mode: image
             span: left
             imageHeight: 260
             imageWidth: 260
-            tab: hambern.company::lang.labels.attachments
+            tab: 'hambern.company::lang.labels.attachments'
         pictures:
-            label: hambern.company::lang.labels.pictures
+            label: 'hambern.company::lang.labels.pictures'
             type: fileupload
             mode: image
             span: right
             imageHeight: 260
             imageWidth: 260
-            tab: hambern.company::lang.labels.attachments
+            tab: 'hambern.company::lang.labels.attachments'
         files:
-            label: hambern.company::lang.labels.files
+            label: 'hambern.company::lang.labels.files'
             type: fileupload
             mode: file
             span: right
-            tab: hambern.company::lang.labels.attachments
+            tab: 'hambern.company::lang.labels.attachments'
         tags:
             type: partial
             path: $/hambern/company/controllers/relations/tags.htm
-            tab: hambern.company::lang.tags.menu_label
+            tab: 'hambern.company::lang.tags.menu_label'

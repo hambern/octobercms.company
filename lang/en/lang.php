@@ -1,6 +1,4 @@
-<?php
-
-return [
+<?php return [
     'plugin' => [
         'name' => 'Company',
         'description' => 'A plugin to show information about your company',
@@ -75,6 +73,7 @@ return [
         'delete_confirm' => 'Do you really want to delete this role?',
         'delete_selected_success' => 'Successfully deleted the selected roles.',
         'delete_selected_empty' => 'There are no selected :name to delete.',
+        'role_identifier' => 'Role ID attribute',
     ],
     'descriptions' => [
         'max_items' => 'Pick the maximum amount of results from your component',
@@ -85,7 +84,10 @@ return [
         'page' => 'Pick which page number you want to show',
         'per_page' => 'Choose how many items you want per page',
         'filter_tags' => 'Filter your results based on tags',
+        'tag_identifier' => 'Which attribute to use to identify the tag',
+        'model_identifier' => 'Which attribute to use to identify the model',
         'filter_roles' => 'Filter your results based on roles',
+        'role_identifier' => 'Which attribute to use to identify the role',
     ],
     'labels' => [
         'name' => 'Name',
@@ -134,6 +136,7 @@ return [
         'city' => 'City',
         'fax' => 'Fax',
         'link' => 'Link',
+        'slug' => 'Slug',
     ],
     'service' => [
         'new' => 'New Service',
@@ -242,5 +245,9 @@ return [
         'delete_confirm' => 'Do you really want to delete this Tag?',
         'delete_selected_success' => 'Successfully deleted the selected Tags.',
         'delete_selected_empty' => 'There are no selected Tags to delete.',
+        'tag_identifier' => 'Tag ID attribute',
+    ],
+    'misc' => [
+        'model_identifier' => 'Model ID attribute',
     ],
 ];

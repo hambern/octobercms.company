@@ -5,6 +5,13 @@
  */
 class Link extends Model
 {
+    use \October\Rain\Database\Traits\Sluggable;
+
+    /**
+     * @var array Generate slugs for these attributes.
+     */
+    protected $slugs = ['slug' => 'name'];
+
     /**
      * @var string The database table used by the model.
      */
