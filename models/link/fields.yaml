@@ -1,48 +1,53 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
     name:
-        label: hambern.company::lang.labels.name
+        label: 'hambern.company::lang.labels.name'
+        oc.commentPosition: ''
         span: auto
+        required: 1
+        type: text
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: 'hambern.company::lang.labels.published_at'
         default: now
         type: datepicker
         mode: date
         span: auto
     url:
-        label: hambern.company::lang.labels.url
+        label: 'hambern.company::lang.labels.url'
         span: auto
-        default: http://
+        default: 'http://'
+        type: text
     icon:
-        label: hambern.company::lang.labels.icon
+        label: 'hambern.company::lang.labels.icon'
         span: auto
         default: fa-
-        comment: hambern.company::lang.projects.icon_comment
-
+        comment: 'hambern.company::lang.projects.icon_comment'
+        type: text
+    slug:
+        label: 'hambern.company::lang.labels.slug'
+        oc.commentPosition: ''
+        span: auto
+        type: text
 tabs:
     fields:
         description:
             type: richeditor
             size: giant
-            label: hambern.company::lang.labels.description
+            label: 'hambern.company::lang.labels.description'
             span: full
-            tab: hambern.company::lang.labels.description
+            tab: 'hambern.company::lang.labels.description'
         picture:
-            label: hambern.company::lang.labels.picture
+            label: 'hambern.company::lang.labels.picture'
             type: fileupload
             mode: image
             span: left
             imageHeight: 260
             imageWidth: 260
-            tab: hambern.company::lang.labels.attachments
+            tab: 'hambern.company::lang.labels.attachments'
         pictures:
-            label: hambern.company::lang.labels.pictures
+            label: 'hambern.company::lang.labels.pictures'
             type: fileupload
             mode: image
             span: right
             imageHeight: 260
             imageWidth: 260
-            tab: hambern.company::lang.labels.attachments
+            tab: 'hambern.company::lang.labels.attachments'

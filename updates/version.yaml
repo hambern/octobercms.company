@@ -1,111 +1,133 @@
 1.0.1:
-    - First version of Company
+    - 'First version of Company'
     - create_employees_table.php
     - create_projects_table.php
     - create_roles_table.php
     - create_services_table.php
     - create_pivots_table.php
 1.0.2:
-    - Added galleries
+    - 'Added galleries'
     - create_galleries_table.php
 1.0.3:
-    - Added testimonials
+    - 'Added testimonials'
     - create_testimonials_table.php
 1.0.4:
-    - Changed timestamps() to nullableTimestamps() in migrations
+    - 'Changed timestamps() to nullableTimestamps() in migrations'
 1.0.5:
-    - Much better permission integration
+    - 'Much better permission integration'
 1.0.6:
-    - Important bug fix to permission integration
+    - 'Important bug fix to permission integration'
 1.0.7:
-    - Another bug fix to permission integration. Still learning this...
+    - 'Another bug fix to permission integration. Still learning this...'
 1.0.8:
-    - Facepalm update ;)
+    - 'Facepalm update ;)'
 1.1.0:
-    - Perfected permissions
+    - 'Perfected permissions'
 1.1.1:
-    - Implements some support of the translate plugin
+    - 'Implements some support of the translate plugin'
 1.1.2:
-    - Improved services tools
+    - 'Improved services tools'
 1.1.3:
-    - Further improved services tools
+    - 'Further improved services tools'
 1.1.4:
-    - Added links tool
+    - 'Added links tool'
     - create_links_table.php
 1.1.5:
-    - Minor bug fixes
+    - 'Minor bug fixes'
 1.1.6:
-    - Settings now also translatable
+    - 'Settings now also translatable'
 1.1.7:
-    - Employee bug fixed
+    - 'Employee bug fixed'
 1.1.8:
-    - Added role filter to Employee component
+    - 'Added role filter to Employee component'
 1.1.9:
-    - Added role component
+    - 'Added role component'
 1.1.10:
-    - Change string to text on Testimonial content
+    - 'Change string to text on Testimonial content'
     - change_testimonials_table_20160201.php
 1.1.11:
-    - Changed field layout for better responsiveness and added markdown for role descriptions
+    - 'Changed field layout for better responsiveness and added markdown for role descriptions'
 1.1.12:
-    - ...and applying the necessary database-changes
+    - '...and applying the necessary database-changes'
     - change_roles_table_20160202.php
 1.2.0:
-    - Added pagination options to the components
+    - 'Added pagination options to the components'
 1.2.1:
-    - Cleaned up the models and corrected a small bug in the service model
+    - 'Cleaned up the models and corrected a small bug in the service model'
 1.2.2:
-    - Another small update to the service component
+    - 'Another small update to the service component'
 1.2.3:
-    - Rearranging components to be able to show several of them at once on the same page
+    - 'Rearranging components to be able to show several of them at once on the same page'
 1.2.4:
-    - Bug fix and a lot cleaner components
+    - 'Bug fix and a lot cleaner components'
 1.2.5:
-    - Bug fix in Links component
+    - 'Bug fix in Links component'
 1.2.6:
-    - Thanks to Jan Vince Company now comes in a Czech translation as well
+    - 'Thanks to Jan Vince Company now comes in a Czech translation as well'
 1.2.7:
-    - Contacts options updated to suit SQL lite as well (thanx Jan Vince)
+    - 'Contacts options updated to suit SQL lite as well (thanx Jan Vince)'
 1.2.8:
-    - Fixed bug on Company-form when there were no employees
+    - 'Fixed bug on Company-form when there were no employees'
 1.2.9:
-    - Add social media information
+    - 'Add social media information'
     - change_employees_table_20160816.php
 1.2.10:
-    - Add social media bug fix
+    - 'Add social media bug fix'
     - change_employees_table_20160831.php
 1.2.11:
-    - Added social media prompt (thanx Jan Vince)
+    - 'Added social media prompt (thanx Jan Vince)'
 1.2.12:
-    - Added company email, phone and address
+    - 'Added company email, phone and address'
 1.2.13:
-    - Updated Czech language file
+    - 'Updated Czech language file'
 1.2.14:
-    - Fixed a really small typo
+    - 'Fixed a really small typo'
 1.2.15:
-    - Dutch translations added
+    - 'Dutch translations added'
 1.3.0:
-    - Added tags
+    - 'Added tags'
     - create_tags_table.php
     - change_pivots_table_20160918.php
 1.3.1:
-    - Added filter options on the components
+    - 'Added filter options on the components'
 1.3.2:
-    - Added social media to company
+    - 'Added social media to company'
 1.3.3:
-    - !!! This changes the logo-field in company to mediafinder. You will have to re-upload it
+    - '!!! This changes the logo-field in company to mediafinder. You will have to re-upload it'
 1.3.4:
-    - Added default dates on published_at and born_at
+    - 'Added default dates on published_at and born_at'
 1.3.5:
-    - !!! Due to a bug the logo-field is now once again a fileupload. Sorry for this.
+    - '!!! Due to a bug the logo-field is now once again a fileupload. Sorry for this.'
 1.3.6:
-    - Updated the Czech language file. Thanks Jan Vince!
+    - 'Updated the Czech language file. Thanks Jan Vince!'
 1.3.7:
-    - Added the Portuguese language file. Thanks Ronaldo Ribeiro de Sousa!
+    - 'Added the Portuguese language file. Thanks Ronaldo Ribeiro de Sousa!'
 1.3.8:
-    - Adding link to services
+    - 'Adding link to services'
     - builder_table_update_hambern_company_services.php
 1.3.9:
     - builder_table_update_hambern_company_services.php
-    - German language support
-    - Adding custom links to services
+    - 'German language support'
+    - 'Adding custom links to services'
+1.4.1:
+    - 'Slug attribute hambern_company_tags'
+    - builder_table_update_hambern_company_tags.php
+1.4.2:
+    - 'Slug attribute hambern_company_projects'
+    - builder_table_update_hambern_company_projects.php
+1.4.3:
+    - 'Slug attribute hambern_company_services'
+    - builder_table_update_hambern_company_services2.php
+1.4.4:
+    - 'Slug attribute hambern_company_links'
+    - builder_table_update_hambern_company_links.php
+1.4.5:
+    - 'Updated table hambern_company_employees'
+    - builder_table_update_hambern_company_employees.php
+1.4.6:
+    - 'Updated table hambern_company_galleries'
+    - builder_table_update_hambern_company_galleries.php
+1.4.7:
+    - 'Updated table hambern_company_roles'
+    - builder_table_update_hambern_company_roles.php
+1.4.8: 'Slug attribute for pretty urls'
