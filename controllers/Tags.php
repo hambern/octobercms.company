@@ -33,8 +33,7 @@ class Tags extends Controller
             }
 
             Flash::success(Lang::get('hambern.company::lang.tags.delete_selected_success'));
-        }
-        else {
+        } else {
             Flash::error(Lang::get('hambern.company::lang.tags.delete_selected_empty'));
         }
 

@@ -11,35 +11,35 @@ use Lang;
 class Galleries extends Controller
 {
 
-	public $requiredPermissions = ['hambern.company.access_galleries'];
+    public $requiredPermissions = ['hambern.company.access_galleries'];
 
-	public function __construct()
-	{
-		parent::__construct();
+    public function __construct()
+    {
+        parent::__construct();
 
-		BackendMenu::setContext('Hambern.Company', 'company', 'galleries');
-	}
+        BackendMenu::setContext('Hambern.Company', 'company', 'galleries');
+    }
 
-	/**
-	 * Deleted checked galleries.
-	 */
-	public function index_onDelete()
-	{
-		if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+    /**
+     * Deleted checked galleries.
+     */
+    public function index_onDelete()
+    {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
-			foreach ($checkedIds as $galleryId) {
-				if (!$gallery = Gallery::find($galleryId)) {
-					continue;
-				}
+            foreach ($checkedIds as $galleryId) {
+                if (!$gallery = Gallery::find($galleryId)) {
+                    continue;
+                }
 
-				$gallery->delete();
-			}
+                $gallery->delete();
+            }
 
-			Flash::success(Lang::get('hambern.company::lang.galleries.delete_selected_success'));
-		} else {
-			Flash::error(Lang::get('hambern.company::lang.galleries.delete_selected_empty'));
-		}
+            Flash::success(Lang::get('hambern.company::lang.galleries.delete_selected_success'));
+        } else {
+            Flash::error(Lang::get('hambern.company::lang.galleries.delete_selected_empty'));
+        }
 
-		return $this->listRefresh();
-	}
+        return $this->listRefresh();
+    }
 }

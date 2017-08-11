@@ -11,35 +11,35 @@ use Lang;
 class Services extends Controller
 {
 
-	public $requiredPermissions = ['hambern.company.access_services'];
+    public $requiredPermissions = ['hambern.company.access_services'];
 
-	public function __construct()
-	{
-		parent::__construct();
+    public function __construct()
+    {
+        parent::__construct();
 
-		BackendMenu::setContext('Hambern.Company', 'company', 'services');
-	}
+        BackendMenu::setContext('Hambern.Company', 'company', 'services');
+    }
 
-	/**
-	 * Deleted checked services.
-	 */
-	public function index_onDelete()
-	{
-		if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+    /**
+     * Deleted checked services.
+     */
+    public function index_onDelete()
+    {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
-			foreach ($checkedIds as $serviceId) {
-				if (!$service = Service::find($serviceId)) {
-					continue;
-				}
+            foreach ($checkedIds as $serviceId) {
+                if (!$service = Service::find($serviceId)) {
+                    continue;
+                }
 
-				$service->delete();
-			}
+                $service->delete();
+            }
 
-			Flash::success(Lang::get('hambern.company::lang.services.delete_selected_success'));
-		} else {
-			Flash::error(Lang::get('hambern.company::lang.services.delete_selected_empty'));
-		}
+            Flash::success(Lang::get('hambern.company::lang.services.delete_selected_success'));
+        } else {
+            Flash::error(Lang::get('hambern.company::lang.services.delete_selected_empty'));
+        }
 
-		return $this->listRefresh();
-	}
+        return $this->listRefresh();
+    }
 }

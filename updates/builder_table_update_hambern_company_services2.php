@@ -8,8 +8,7 @@ class BuilderTableUpdateHambernCompanyServices2 extends Migration
 {
     public function up()
     {
-        Schema::table('hambern_company_services', function($table)
-        {
+        Schema::table('hambern_company_services', function ($table) {
             $table->string('slug')->index();
         });
 
@@ -19,11 +18,10 @@ class BuilderTableUpdateHambernCompanyServices2 extends Migration
             $model->save();
         });
     }
-    
+
     public function down()
     {
-        Schema::table('hambern_company_services', function($table)
-        {
+        Schema::table('hambern_company_services', function ($table) {
             $table->dropColumn('slug');
         });
     }

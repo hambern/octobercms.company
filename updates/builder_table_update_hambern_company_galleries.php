@@ -8,8 +8,7 @@ class BuilderTableUpdateHambernCompanyGalleries extends Migration
 {
     public function up()
     {
-        Schema::table('hambern_company_galleries', function($table)
-        {
+        Schema::table('hambern_company_galleries', function ($table) {
             $table->string('slug')->index();
         });
 
@@ -19,11 +18,10 @@ class BuilderTableUpdateHambernCompanyGalleries extends Migration
             $model->save();
         });
     }
-    
+
     public function down()
     {
-        Schema::table('hambern_company_galleries', function($table)
-        {
+        Schema::table('hambern_company_galleries', function ($table) {
             $table->dropColumn('slug');
         });
     }

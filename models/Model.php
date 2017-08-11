@@ -13,25 +13,25 @@ class Model extends BaseModel
 
     protected $guarded = ['*'];
 
-	public function scopePublished($query)
-	{
-		return $query->where('published_at', '<', date('Y-m-d H:i:s'));
-	}
+    public function scopePublished($query)
+    {
+        return $query->where('published_at', '<', date('Y-m-d H:i:s'));
+    }
 
-	public function afterDelete()
-	{
-		if (!empty($this->picture)) {
-			$this->picture->delete();
-		}
-		if (!empty($this->pictures)) {
-			foreach ($this->pictures as $item) {
-				$item->delete();
-			}
-		}
-		if (!empty($this->files)) {
-			foreach ($this->files as $item) {
-				$item->delete();
-			}
-		}
-	}
+    public function afterDelete()
+    {
+        if (!empty($this->picture)) {
+            $this->picture->delete();
+        }
+        if (!empty($this->pictures)) {
+            foreach ($this->pictures as $item) {
+                $item->delete();
+            }
+        }
+        if (!empty($this->files)) {
+            foreach ($this->files as $item) {
+                $item->delete();
+            }
+        }
+    }
 }

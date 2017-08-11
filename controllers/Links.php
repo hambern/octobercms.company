@@ -33,8 +33,7 @@ class Links extends Controller
             }
 
             Flash::success(Lang::get('hambern.company::lang.links.delete_selected_success'));
-        }
-        else {
+        } else {
             Flash::error(Lang::get('hambern.company::lang.links.delete_selected_empty'));
         }
 

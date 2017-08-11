@@ -230,11 +230,11 @@ return [
         'list_title' => 'Hantera etiketter',
     ],
     'tags' => [
-      'delete_selected_confirm' => 'Radera markerade länkar?',
-      'menu_label' => 'Etiketter',
-      'return_to_list' => 'Tillbaka till etiketter',
-      'delete_confirm' => 'Vill du verkligen ta bort denna etikett?',
-      'delete_selected_success' => 'Raderade de markerade etiketterna.',
-      'delete_selected_empty' => 'Det finns inga :name att radera.',
+        'delete_selected_confirm' => 'Radera markerade länkar?',
+        'menu_label' => 'Etiketter',
+        'return_to_list' => 'Tillbaka till etiketter',
+        'delete_confirm' => 'Vill du verkligen ta bort denna etikett?',
+        'delete_selected_success' => 'Raderade de markerade etiketterna.',
+        'delete_selected_empty' => 'Det finns inga :name att radera.',
     ],
 ];

@@ -8,7 +8,7 @@ class CreateLinksTable extends Migration
 
     public function up()
     {
-        Schema::create('hambern_company_links', function($table) {
+        Schema::create('hambern_company_links', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
@@ -18,7 +18,7 @@ class CreateLinksTable extends Migration
             $table->date('published_at')->nullable();
             $table->nullableTimestamps();
         });
-        Schema::table('hambern_company_pivots', function($table) {
+        Schema::table('hambern_company_pivots', function ($table) {
             $table->integer('link_id')->unsigned()->nullable()->index();
         });
     }
@@ -26,12 +26,12 @@ class CreateLinksTable extends Migration
     public function down()
     {
         Schema::dropIfExists('hambern_company_links');
-        
+
         if (Schema::hasColumn('hambern_company_pivots', 'link_id')) {
-            Schema::table('hambern_company_pivots', function($table) {
+            Schema::table('hambern_company_pivots', function ($table) {
                 $table->dropColumn('link_id');
             });
-        } 
+        }
     }
 
 }
