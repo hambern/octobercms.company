@@ -81,8 +81,8 @@ class Employees extends Component
         $options = [Lang::get('hambern.company::lang.labels.show_all')];
         $roles = Role::has('employees')->get();
         $id_attribute = $this->property('roleIdentifier', 'id');
-        if ($roles)
-            $options += $roles->lists('name', $id_attribute);
+        $options += $roles->lists('name', $id_attribute);
+
         return $options;
     }
 }
