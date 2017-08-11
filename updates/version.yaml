@@ -131,3 +131,4 @@
     - 'Updated table hambern_company_roles'
     - builder_table_update_hambern_company_roles.php
 1.4.8: 'Slug attribute for pretty urls'
+1.4.9: 'Codebase PSR2 coding standard'
