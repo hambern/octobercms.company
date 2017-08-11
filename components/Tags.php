@@ -4,44 +4,45 @@ use Hambern\Company\Models\Tag;
 
 class Tags extends Component
 {
+    public $table = 'hambern_company_tags';
 
-  public $table = 'hambern_company_tags';
-
-  public function componentDetails()
-  {
-      return [
-          'name'        => 'hambern.company::lang.components.tags.name',
-          'description' => 'hambern.company::lang.components.tags.description'
-      ];
-  }
-
-  public function onRun()
-  {
-      $this->page['tag'] = $this->tag();
-      $this->page['tags'] = $this->tags();
-  }
-
-  public function tag()
-  {
-    if (is_numeric($this->property('itemId')) && !empty($this->property('itemId'))) {
-      if ($this->item) return $this->item;
-      return $this->item = Tag::whereId($this->property('itemId'))->with('picture', 'pictures')->first();
+    public function componentDetails()
+    {
+        return [
+            'name' => 'hambern.company::lang.components.tags.name',
+            'description' => 'hambern.company::lang.components.tags.description'
+        ];
     }
-  }
 
-  public function tags()
-  {
-    if (!is_numeric($this->property('itemId')) || empty($this->property('itemId'))) {
-      if ($this->list) return $this->list;
-      $tags = Tag::published()
-        ->with('picture', 'pictures')
-        ->orderBy($this->property('orderBy', 'id'), $this->property('sort', 'desc'))
-        ->take($this->property('maxItems'));
-
-      return $this->list = $this->property('paginate') ?
-        $tags->paginate($this->property('perPage'), $this->property('page')) :
-        $tags->get();
+    public function onRun()
+    {
+        $this->page['tag'] = $this->tag();
+        $this->page['tags'] = $this->tags();
     }
-  }
+
+    public function tag()
+    {
+        if (!empty($this->property('itemId'))) {
+            if ($this->item) return $this->item;
+            return $this->item = Tag::where($this->property('modelIdentifier', 'id'), $this->property('itemId'))
+                ->with('picture', 'pictures')
+                ->first();
+        }
+    }
+
+    public function tags()
+    {
+        if (empty($this->property('itemId'))) {
+            if ($this->list) return $this->list;
+            $tags = Tag::published()
+                ->with('picture', 'pictures')
+                ->orderBy($this->property('orderBy', 'id'), $this->property('sort', 'desc'))
+                ->take($this->property('maxItems'));
+
+            return $this->list = $this->property('paginate') ?
+                $tags->paginate($this->property('perPage'), $this->property('page')) :
+                $tags->get();
+        }
+    }
 
 }

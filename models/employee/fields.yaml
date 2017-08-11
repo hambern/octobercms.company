@@ -1,79 +1,91 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
     first_name:
-        label: hambern.company::lang.labels.first_name
+        label: 'hambern.company::lang.labels.first_name'
+        oc.commentPosition: ''
         span: auto
+        required: 1
+        type: text
     last_name:
-        label: hambern.company::lang.labels.last_name
+        label: 'hambern.company::lang.labels.last_name'
+        oc.commentPosition: ''
         span: auto
+        type: text
     quote:
-        label: hambern.company::lang.labels.quote
+        label: 'hambern.company::lang.labels.quote'
         span: auto
+        type: text
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: 'hambern.company::lang.labels.published_at'
         default: now
         type: datepicker
         mode: date
         span: auto
-
+    slug:
+        label: 'hambern.company::lang.labels.slug'
+        oc.commentPosition: ''
+        span: auto
+        type: text
 tabs:
-  fields:
-    picture:
-        label: hambern.company::lang.labels.picture
-        type: fileupload
-        mode: image
-        span: right
-        imageHeight: 260
-        imageWidth: 260
-        tab: hambern.company::lang.labels.information
-    born_at:
-        label: hambern.company::lang.labels.born_at
-        type: datepicker
-        default: today - 30 years
-        mode: date
-        minDate: 1900-01-01
-        span: left
-        tab: hambern.company::lang.labels.information
-    email:
-        label: hambern.company::lang.labels.email
-        span: left
-        tab: hambern.company::lang.labels.information
-    phone:
-        label: hambern.company::lang.labels.phone
-        span: left
-        tab: hambern.company::lang.labels.information
-    description:
-        type: richeditor
-        size: giant
-        label: hambern.company::lang.labels.description
-        span: full
-        tab: hambern.company::lang.labels.description
-    roles:
-        type: partial
-        path: $/hambern/company/controllers/relations/roles.htm
-        tab: hambern.company::lang.roles.menu_label
-    social_media:
-      type: repeater
-      tab: hambern.company::lang.labels.social
-      prompt: hambern.company::lang.labels.social_prompt
-      form:
-          fields:
-              name:
-                  label: hambern.company::lang.labels.name
-                  comment: hambern.company::lang.employees.name_comment
-                  span: auto
-              icon:
-                  label: hambern.company::lang.labels.icon
-                  span: auto
-                  default: fa-
-                  comment: hambern.company::lang.projects.icon_comment
-                  tab: hambern.company::lang.labels.description
-              username:
-                  label: hambern.company::lang.labels.username
-                  span: auto
-              url:
-                  label: hambern.company::lang.labels.user_url
-                  span: auto
+    fields:
+        picture:
+            label: 'hambern.company::lang.labels.picture'
+            type: fileupload
+            mode: image
+            span: right
+            imageHeight: 260
+            imageWidth: 260
+            tab: 'hambern.company::lang.labels.information'
+        born_at:
+            label: 'hambern.company::lang.labels.born_at'
+            type: datepicker
+            default: 'today - 30 years'
+            mode: date
+            minDate: -2208988800
+            span: left
+            tab: 'hambern.company::lang.labels.information'
+        email:
+            label: 'hambern.company::lang.labels.email'
+            span: left
+            tab: 'hambern.company::lang.labels.information'
+            type: text
+        phone:
+            label: 'hambern.company::lang.labels.phone'
+            span: left
+            tab: 'hambern.company::lang.labels.information'
+            type: text
+        description:
+            type: richeditor
+            size: giant
+            label: 'hambern.company::lang.labels.description'
+            span: full
+            tab: 'hambern.company::lang.labels.description'
+        roles:
+            type: partial
+            path: $/hambern/company/controllers/relations/roles.htm
+            tab: 'hambern.company::lang.roles.menu_label'
+        social_media:
+            type: repeater
+            tab: 'hambern.company::lang.labels.social'
+            prompt: 'hambern.company::lang.labels.social_prompt'
+            form:
+                fields:
+                    name:
+                        label: 'hambern.company::lang.labels.name'
+                        comment: 'hambern.company::lang.employees.name_comment'
+                        span: auto
+                        type: text
+                    icon:
+                        label: 'hambern.company::lang.labels.icon'
+                        span: auto
+                        default: fa-
+                        comment: 'hambern.company::lang.projects.icon_comment'
+                        tab: 'hambern.company::lang.labels.description'
+                        type: text
+                    username:
+                        label: 'hambern.company::lang.labels.username'
+                        span: auto
+                        type: text
+                    url:
+                        label: 'hambern.company::lang.labels.user_url'
+                        span: auto
+                        type: text
