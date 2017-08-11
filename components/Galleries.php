@@ -81,8 +81,8 @@ class Galleries extends Component
         $options = [Lang::get('hambern.company::lang.labels.show_all')];
         $tags = Tag::has('galleries')->get();
         $id_attribute = $this->property('tagIdentifier', 'id');
-        if ($tags)
-            $options += $tags->lists('name', $id_attribute);
+        $options += $tags->lists('name', $id_attribute);
+
         return $options;
     }
 }

@@ -26,11 +26,12 @@ class Company extends BaseModel
     public function getContactOptions()
     {
         $options = [];
-        if ($data = Employee::orderBy('last_name')->get()) {
-            foreach ($data as $record) {
-                $options[$record->id] = $record->name;
-            }
+        $data = Employee::orderBy('last_name')->get();
+
+        foreach ($data as $record) {
+            $options[$record->id] = $record->name;
         }
+
         return $options;
     }
 }
