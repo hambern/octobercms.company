@@ -72,7 +72,7 @@ class Projects extends Component
             'title' => 'hambern.company::lang.tags.menu_label',
             'description' => 'hambern.company::lang.descriptions.filter_tags',
             'type' => 'dropdown',
-            'depends'     => ['tagIdentifier'],
+            'depends' => ['tagIdentifier'],
             'group' => 'hambern.company::lang.labels.filters',
         ];
         return $properties;

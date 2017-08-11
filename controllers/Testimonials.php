@@ -11,35 +11,35 @@ use Lang;
 class Testimonials extends Controller
 {
 
-	public $requiredPermissions = ['hambern.company.access_testimonials'];
+    public $requiredPermissions = ['hambern.company.access_testimonials'];
 
-	public function __construct()
-	{
-		parent::__construct();
+    public function __construct()
+    {
+        parent::__construct();
 
-		BackendMenu::setContext('Hambern.Company', 'company', 'testimonials');
-	}
+        BackendMenu::setContext('Hambern.Company', 'company', 'testimonials');
+    }
 
-	/**
-	 * Deleted checked testimonials.
-	 */
-	public function index_onDelete()
-	{
-		if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+    /**
+     * Deleted checked testimonials.
+     */
+    public function index_onDelete()
+    {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
-			foreach ($checkedIds as $testimonialId) {
-				if (!$testimonial = Testimonial::find($testimonialId)) {
-					continue;
-				}
+            foreach ($checkedIds as $testimonialId) {
+                if (!$testimonial = Testimonial::find($testimonialId)) {
+                    continue;
+                }
 
-				$testimonial->delete();
-			}
+                $testimonial->delete();
+            }
 
-			Flash::success(Lang::get('hambern.company::lang.testimonials.delete_selected_success'));
-		} else {
-			Flash::error(Lang::get('hambern.company::lang.testimonials.delete_selected_empty'));
-		}
+            Flash::success(Lang::get('hambern.company::lang.testimonials.delete_selected_success'));
+        } else {
+            Flash::error(Lang::get('hambern.company::lang.testimonials.delete_selected_empty'));
+        }
 
-		return $this->listRefresh();
-	}
+        return $this->listRefresh();
+    }
 }

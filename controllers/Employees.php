@@ -11,35 +11,35 @@ use Lang;
 class Employees extends Controller
 {
 
-	public $requiredPermissions = ['hambern.company.access_employees'];
+    public $requiredPermissions = ['hambern.company.access_employees'];
 
-	public function __construct()
-	{
-		parent::__construct();
+    public function __construct()
+    {
+        parent::__construct();
 
-		BackendMenu::setContext('Hambern.Company', 'company', 'employees');
-	}
+        BackendMenu::setContext('Hambern.Company', 'company', 'employees');
+    }
 
-	/**
-	 * Deleted checked employees.
-	 */
-	public function index_onDelete()
-	{
-		if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+    /**
+     * Deleted checked employees.
+     */
+    public function index_onDelete()
+    {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
-			foreach ($checkedIds as $employeeId) {
-				if (!$employee = Employee::find($employeeId)) {
-					continue;
-				}
+            foreach ($checkedIds as $employeeId) {
+                if (!$employee = Employee::find($employeeId)) {
+                    continue;
+                }
 
-				$employee->delete();
-			}
+                $employee->delete();
+            }
 
-			Flash::success(Lang::get('hambern.company::lang.employees.delete_selected_success'));
-		} else {
-			Flash::error(Lang::get('hambern.company::lang.employees.delete_selected_empty'));
-		}
+            Flash::success(Lang::get('hambern.company::lang.employees.delete_selected_success'));
+        } else {
+            Flash::error(Lang::get('hambern.company::lang.employees.delete_selected_empty'));
+        }
 
-		return $this->listRefresh();
-	}
+        return $this->listRefresh();
+    }
 }

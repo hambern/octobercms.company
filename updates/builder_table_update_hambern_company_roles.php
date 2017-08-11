@@ -8,8 +8,7 @@ class BuilderTableUpdateHambernCompanyRoles extends Migration
 {
     public function up()
     {
-        Schema::table('hambern_company_roles', function($table)
-        {
+        Schema::table('hambern_company_roles', function ($table) {
             $table->string('slug')->index();
         });
 
@@ -19,11 +18,10 @@ class BuilderTableUpdateHambernCompanyRoles extends Migration
             $model->save();
         });
     }
-    
+
     public function down()
     {
-        Schema::table('hambern_company_roles', function($table)
-        {
+        Schema::table('hambern_company_roles', function ($table) {
             $table->dropColumn('slug');
         });
     }

@@ -8,7 +8,7 @@ class CreateTagsTable extends Migration
 {
     public function up()
     {
-        Schema::create('hambern_company_tags', function(Blueprint $table) {
+        Schema::create('hambern_company_tags', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
